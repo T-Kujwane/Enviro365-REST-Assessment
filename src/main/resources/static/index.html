@@ -16,12 +16,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 Choose an option from the ones given below.
             </p>
             <ol>
-                <li><a href="register-investor.html">Register Investor</a></li>
-                <li><a href="get-investor-info.html">Get Investor Data</a></li>
-                <li><a href="get-investor-products.html">Get Investor Products</a></li>
-                <li><a href="withdraw.html">Withdraw</a></li>
+                <li><a href="/addInvestor">Register Investor</a></li>
+                <li><a href="/addInvestment">Add Client Investment</a></li>
+                <li>
+                    <a id="investorDetailsLink" href="" onclick="getInvestorDetails()">
+                        Get Investor Data
+                    </a>
+                </li>
+                <li><a id="investorProductsLink" href="" onclick="getInvestorProducts()">Get Investor Products</a></li>
+                <li><a href="/fileWithdrawalNotice">Withdraw</a></li>
             </ol>
 
         </nav>
+        
+        <script>
+            function getInvestorDetails(){
+                var idNumber = prompt("ID Number");
+                document.getElementById("investorDetailsLink").href="/getInvestorDetails?idNumber=" + idNumber;
+            }
+            
+            function getInvestorProducts(){
+                var idNumber = prompt("ID Number");
+                document.getElementById("investorProductsLink").href="/getInvestorProducts?idNumber=" + idNumber;
+            }
+        </script>
     </body>
 </html>

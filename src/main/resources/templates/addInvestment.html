@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Add Client Investment Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h1>Add Investment To Client Profile</h1></div>
+        
+        <p>
+            Fill the form to complete the process or click <a href="/index.html">here</a> to navigate home.
+        </p>
+        
+        <form action="/addClientInvestment" method="POST">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="2">New Client Investment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Client ID Number</td>
+                        <td><input type="text" name="idNumber" required="" maxlength="13"></td>
+                    </tr>
+                    <tr>
+                        <td>Investment Product</td>
+                        <td>
+                            <select name="investmentType">
+                                <option value="Retirement">Retirement</option>
+                                <option value="Savings">Savings</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Initial Investment Amount</td>
+                        <td><input type="text" name="investmentAmount" required=""></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right;"><input type="submit" value="Add Investment"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </body>
+</html>

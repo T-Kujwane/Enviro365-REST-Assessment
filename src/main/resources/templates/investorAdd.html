@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Add New Investor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Investor Addition.</h1>
+        <p>
+            Please fill the form to add a new investor.<br>
+        </p>
+        
+        <form action="/addNewInvestor" method="POST">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: center;">Investor Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ID number</td>
+                        <td><input type="text" name="idNumber" required="" maxlength="13"></td>
+                    </tr>
+                    <tr>
+                        <td>First name</td>
+                        <td><input type="text" name="firstName" required=""></td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td><input type="text" name="lastName" required=""></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number</td>
+                        <td><input type="tel" name="phoneNumber" required=""></td>
+                    </tr>
+                    <tr>
+                        <td>Email address</td>
+                        <td><input type="email" name="emailAddress" required=""></td>
+                    </tr>
+                    <tr>
+                        <td>Residential address</td>
+                        <td>
+                            <input type="text" name="street" required="" placeholder="Street"><br>
+                            <input type="text" name="suburb" placeholder="Suburb"><br>
+                            <input type="text" name="city" required="" placeholder="City"><br>
+                            <input type="text" name="postalCode" required="" placeholder="Postal Code">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Investment Type</td>
+                        <td>
+                            <select required="" name="investmentType">
+                                <option value="Retirement">Retirement</option>
+                                <option value="Savings">Savings</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Initial investment amount</td>
+                        <td><input type="number" name="investmentAmount"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right;"><input type="submit" value="Add Investor"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        
+    </body>
+</html>
